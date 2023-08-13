@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zubairu Ashiru</title>
+
+<style>
+
+
+
+     *{
+
+        box-sizing: border-box;
+     }
+
+     html, body{
+
+          margin: 0px;
+          padding: 0px;
+          overflow-x: hidden;
+     }
+
+
+    .container{
+
+       text-align: center;
+       width: 80vw;
+       margin: 0 auto;
+       padding: 40px;
+    }
+
+    header{
+
+           background: green;
+           color: white;
+           text-align: center;
+           font-weight: bold;
+           width: 100vw;
+           font-size: 2.5vw;
+           padding: 4.5vw;
+
+    }
+
+      h2{
+
+           color: maroon;
+      }
+
+
+      h2, h3{
+
+          font-size: 2vw;
+      }
+      
+      
+      h3{
+           
+           color: blue;
+      }
+
+      label{
+
+          font-size: 2vw;
+      }
+
+      #btn{
+
+           padding:  0.5vw 1vw ;
+           font-size: 1.5vw;
+           font-weight: bold;
+           box-shadow: 2px 4px 3px 2px grey;
+           background: white;
+           border: none;
+           border-radius: 10px;
+
+
+      }
+
+      #input{
+
+            padding: 10px;
+            width: 60vw;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 2px 4px 6px 2px grey;
+            margin-bottom: 5px;
+            margin-top: 30px;
+            font-size: 2vw;
+      }
+
+      .footer{
+
+          background-color: green;
+          color: white;
+          padding: 30px;
+          margin-top: 200px;
+          font-size: 3.5vw;
+          text-align: center;
+      }
+
+
+        .error-message-div{
+
+               display: none;
+        }
+
+        .error-message-div{
+
+             color: red;
+             background: white;
+             padding: 5%;
+             width: 50%;
+             margin: 0 auto;
+             font-size: 2vw;
+             font-weight: bold;
+             border: 3px solid blue;
+        }
+
+        .name{
+
+             color: red;
+        }
+
+        .signin-word{
+
+             font-weight: bold;
+            
+        }
+</style>
+</head>
+<body>
+
+  <header>Automated Attendace System</header>
+
+  <div class="container">
+     
+<h2>Government Secondary School Rigasa Junior (Main)</h2>
+<h3>Teachers are role models. Let's be punctual!</h3>
+
+
+<!-- The Attendance Form -->
+<div class="error-message-div"><span class="error-message-span"></span></div>
+<form action="#" method="dialog" class="attendance-form" name="attendance-form">
+
+  <label for="name">Please input name and click <span class="signin-word"><i>sign in</i></span>
+    </label><br/>
+  <input type="text" id="input"/><br>
+  <input type="submit" value="Sign In" id="btn"><br>
+
+</form>
+   <h4 class="names"></h4>
+  </div>
+  <footer class="footer">&copy; Zubairu Ashiru</footer>
+
+</body>
+<script> 
+
+
+
+ // ATTENDANCE INPUT EVENT
+
+
+let form = document.querySelector(".attendance-form");
+form.addEventListener("submit", function(){
+
+   let input_value = document.querySelector("#input").value;  
+if (isNaN(input_value) === false && (input_value !== "")){
+   
+ 
+   
+  function detect_number(){
+
+    let error_message_div = document.querySelector(".error-message-div");
+let error_message_span = document.querySelector(".error-message-span");
+
+
+
+error_message_div.style.display = "block";
+error_message_span.innerHTML = "Invalid input. Numbers only are not allowed!";
+
+
+
+
+
+setTimeout(function hide(){
+  
+  
+
+      
+error_message_div.style.display = "none";
+       
+      }, 4000)
+     }  
+     
+     detect_number();
+    
+  
+  
+    
+
+}else if(input_value.length === 0){ 
+     
+  let error_message_div = document.querySelector(".error-message-div");
+let error_message_span = document.querySelector(".error-message-span");
+
+        error_message_span.innerHTML = "Input can't be empty!"
+
+        error_message_div.style.display = "block";
+  
+      
+        setTimeout(function hide(){
+               
+          error_message_div.style.display = "none";
+                
+               }, 4000)
+
+
+
+    
+}else{
+
+  let date = new Date(); 
+
+ let inputValue = document.getElementById("input").value;
+
+ let names = document.querySelector(".names");
+ names.innerHTML += `<h3> Hello <span class="name">${input_value} </span> You signed in exactly at ${date}<h3>`;
+
+}
+       
+
+  })
+ 
+
+    
+  
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+
+        nav{
+            background: aqua;
+            padding: 2vw;
+            margin: -10px;
+
+            }
+
+            footer{
+
+                background-color: aqua;
+                padding: 20px;
+                margin: -10px;
+                margin-top: 500px;
+                font-size: 3vw;
+            }
+
+            #text-area{
+
+                width: 35vw;
+                height: 500px;
+                font-size: 1.5vw;
+                padding-left: 1vw;
+
+            }
+
+            #btn{
+
+                background: green;
+                /* background: red; */
+                font-weight: bold;
+                color: white;
+                padding: 0.25vw 1vw;
+                display: block;
+                margin-bottom: 0px;
+                margin-top: 40px;
+                margin-left: 18%;
+                font-size: 1.5vw;
+                
+            }
+
+            #browser{
+
+                /* float: right; */
+                width: 55vw;
+                display: block;
+                margin-bottom: 30px;
+
+    
+            }
+
+            .title{
+
+                font-size: 4vw;
+                text-align: center;
+            }
+
+            .flex-container{
+
+                 display: flex; 
+            }
+
+            .browser-div, #text-area{
+
+                  margin: 10px;
+                  border: 1px solid black;
+            }
+
+            .browser-label{
+
+                text-align: end;
+                color: red;
+                display: block;
+                margin-top: 80p;
+
+            }
+
+     
+
+    </style>
+
+
+</head>
+<body>
+    
+    <nav>
+        
+        <h1 class="title"> Coding-Desk </h1>
+
+    </nav>
+<div class="flex-container">
+   <div>
+        <button type="submit" id="btn">Run <span>&gt;&gt;</span></button>
+
+        <textarea id="text-area">
+        
+<!-- Write your code below this line -->  
+        </textarea>
+        
+</div>  
+<!-- <div  id="browser-lablediv">
+
+    <div> -->
+<div id="browser">
+</div>
+</div>
+</div>
+
+
+    <!-- THE FOOTER -->
+    <footer>&copy; 2023 Zubairu Ashiru</footer>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    btn.onclick = function(){
+        let text_editor = document.getElementById("text-area").value;
+        console.log(text_editor);
+
+
+      let browser = document.getElementById("browser");
+      browser.style.fontSize = "3vw";
+      browser.innerHTML = `${text_editor}`;
+
+  
+
+
+    }
+</script>
+</html>

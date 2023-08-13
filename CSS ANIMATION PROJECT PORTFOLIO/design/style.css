@@ -1,0 +1,282 @@
+  html, body{
+
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  html{
+
+      width: 100vw;
+  }
+
+  body{
+
+        width: 100vw;
+  }
+
+  html, body{
+
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+
+  }
+
+
+   .road{
+
+    background: black;
+    height: 300px;
+    width:100vw;
+    box-sizing: border-box;
+    /* margin-left: -8px; */
+    overflow-x: hidden;
+
+   }
+
+   @media (max-width: 600px){
+
+         .road, .sky{
+
+              height:200px;
+              width: 100vw;
+         }
+
+         .grass{
+
+              height: 100px;
+              width: 100vw;
+         }
+
+
+        .five{
+            position: absolute;
+            top: 130px;
+        }
+
+        .six{
+            position: absolute;
+            top: 150px;
+        }
+
+        .seven{
+            position: absolute;
+            top: 170px;
+        }
+
+    
+
+
+/*          
+   @keyframes drive{
+    from {transform: translatex(-170px)}
+    to {transform: translatex(2800px)}
+}  */
+
+   }
+
+.one{
+    position: absolute;
+    top: 5px;
+    animation-name: drive;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+    width: 20px;
+   }
+
+   .two{
+    position: absolute;
+    top: 75px;
+    opacity: 0.5;
+    animation-name: drive;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+
+   .three{
+    position: absolute;
+    top: 35px;
+    opacity: 0.5;
+    animation-name: drive;
+    animation-duration: 55s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+   .four{
+    position: absolute;
+    top: 180px;
+    opacity: 0.8;
+    animation-name: drive;
+    animation-duration: 70s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+   .five{
+    position: absolute;
+    top: 5px;
+    opacity: 0.6;
+    animation-name: drive;
+    animation-duration: 85s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+   .six{
+    position: absolute;
+    top:200px;
+    opacity: 0.4;
+    animation-name: drive;
+    animation-duration: 100s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+   .seven{
+    position: absolute;
+    top: 220px;
+    opacity: 0.2;
+    animation-name: drive;
+    animation-duration: 115s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: normal;
+   }
+
+   .hellicopter-one{
+   
+    position: absolute;
+    top: 50px;
+    width: 20px;
+    animation-name: drive;
+    animation-duration: 25s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: linear;
+    
+   }
+
+
+   .hellicopter-one-image{
+    
+    width: 100px;
+    display: block;
+
+   }
+
+
+   .container{
+       width: 100vw;
+       box-sizing: border-box;
+   }
+    
+   body{
+       width: 100%;
+       box-sizing: border-box;
+       /* background: green; */
+
+   }
+
+   .grass{
+       background: green;
+       height: 150px;
+       width: 100vw;
+       box-sizing: border-box;
+       overflow-x: hidden;  
+
+
+   }
+
+   .grass2{
+
+    
+    background: green;
+    height: 50px;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+
+   }
+
+   .sky{
+
+    background: skyblue;
+    width: 100vw;
+    height: 300px;
+    margin-top: -8px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+   }
+
+   .line{
+
+    background: white;
+    width: 100%;
+    height: 0px;
+    border: 8px dashed black;
+    position: relative;
+    bottom: -40%;
+    margin-left: -8px;
+
+    box-sizing: border-box;
+
+   }
+
+
+  
+   .yellow-car{
+    position: relative;
+    top: 150px;
+    animation-name: drive;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+   }
+
+   .yellow-car{
+       width:30px;
+   }
+
+   .white-car{
+    
+        position: absolute;
+        top: 280px;
+        animation-name: drive;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-direction: reverse;
+       }
+
+       .white-car{
+           width: 30px;
+       }
+    
+
+
+   @keyframes drive{
+       from {transform: translatex(-170px)}
+       to {transform: translatex(2800px)}
+   } 
+img[scr="images/cloud.jpg"]{
+
+      width: 10px;
+}
+

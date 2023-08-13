@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/bookMania.css">
+</head>
+<style>
+ #app-title{
+     font-size: 5vw;
+     color: purple;
+     margin: 0px auto 50px auto;
+     width: 50vw;
+     margin-bottom: 50px;
+     
+     
+} 
+ 
+p{
+    font-size: 3vw; 
+}
+html{
+
+padding-bottom: 0px;
+}
+
+
+.app-container{
+
+
+width: 100%;
+height: 100%;
+margin-bottom: 0px;
+
+}
+
+.form-container{
+
+margin: 0 auto;
+margin-bottom: 40px;
+background: white;
+/* color: black; */
+width: 70vw;
+height: 1000px;
+padding: 10%;
+display: block;
+position: relative;
+line-height: 1.4em;
+}
+
+
+input[type="submit"], input[type="reset"]{
+
+    background: white;
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    box-shadow: 2px 4px 6px 2px grey;
+    background: white;
+    font-size: 1.2vw;
+    border-radius: 2px;
+
+}
+
+#task-name{
+
+width: 99%;
+
+padding: 10px;
+border: none;
+box-shadow: 2px 3px 6px 2px grey;
+background: white;
+border-radius: 6px;
+font-size: 1.5vw;
+margin-top: 10px;
+
+}
+
+#form-caption{
+margin-bottom: -10px;
+display: block;
+font-size: 2vw;
+
+}
+
+footer{
+
+    background: purple;
+    padding: 20px;
+    font-size: 3vw;
+    color: white;
+}
+
+
+</style>
+<body>
+   <div class="app-container">
+    <div class="form-container">
+    
+    <h1 id="app-title">TaskNazium</h1>
+
+    <!-- Book Selection form -->
+
+    <form id="task-list-form" name="task-list-form" method="dialog">
+      <label for="select-book" id="form-caption">What Do You Want To Do?</label>
+      <input type="text" id="task-name" name="task-name"  placeholder="E.g Do the dishes"><br>
+      <input type="reset" id="reset">
+      <input type="submit" id="add-task" name="add-task" value="Add Task" /><span class="validate"></span>
+    </form>
+
+
+
+
+ 
+   </div>
+</div>
+    
+<footer class="footer">&copy; Zubairu Ashiru </footer>
+
+
+<script>
+
+
+// variable declarations
+// let delDialog = document.querySelector(".delete-dialog");
+let yesBtn;
+let noBtn; 
+let taskDiv;
+let taskNameSpan;
+let taskDelButton;
+let taskNameValue;
+
+let firstLetter;
+let  restOfLetters;
+let taskListForm;
+let toConfirm;
+let delbtns;
+let validate;
+
+//Grabbing BookList Form
+taskListForm = document.querySelector("#task-list-form");
+
+// On submiting the form
+
+taskListForm.addEventListener("submit", function (e) {
+    taskNameValue = document.querySelector("#task-name").value;
+    taskDiv = document.createElement("div");
+    taskNameSpan = document.createElement("span");
+    taskDelButton = document.createElement("input");
+    taskListForm = document.querySelector("#task-list-form");
+
+    // Capitalize first character
+
+    firstLetter = taskNameValue.slice(0, 1).toUpperCase();
+    restOfLetters = taskNameValue.slice(1).toLowerCase();
+    taskNameValue = `${firstLetter}${restOfLetters}`;
+    let taskDivArray = document.querySelectorAll("div");
+
+
+    if (taskNameValue.length === 0) {
+       
+      
+        validate = document.querySelector(".validate");
+        validate.innerHTML = "Please fill out before adding";
+        validate.style.fontSize = "2.5vw"
+        validate.style.color = "red";
+        validate.style.marginLeft = "20px";
+
+        function animateError(){
+       
+        validate = document.querySelector(".validate");
+        validate.innerHTML = "";
+        validate.style.color = "red";
+        validate.style.marginLeft = "20px";
+
+        }
+        setTimeout(animateError, 3000)
+
+        return false;
+    } else if (taskNameValue.length > 27) {
+        validate = document.querySelector(".validate");
+
+        validate.innerHTML = "Sorry only 27 or less characters are allowed";
+        validate.style.color = "red";
+        validate.style.marginLeft = "20px";
+
+        function animateError(){
+       
+            validate = document.querySelector(".validate");
+            validate.innerHTML = "";
+            validate.style.color = "red";
+            validate.style.marginLeft = "20px";
+    
+            }
+            setTimeout(animateError, 3000)
+       
+
+
+        return false;
+
+    } else if (taskDivArray.length > 13){
+
+            validate = document.querySelector(".validate");
+    
+            validate.innerHTML = "Only 12 tasks can be added per day";
+            validate.style.color = "red";
+            validate.style.marginLeft = "20px";
+            
+        function animateError(){
+       
+            validate = document.querySelector(".validate");
+            validate.innerHTML = "";
+            validate.style.color = "red";
+            validate.style.marginLeft = "20px";
+    
+            }
+            setTimeout(animateError, 3000)
+       
+
+            return false;
+        }
+    
+    
+    taskListForm.after(taskDiv);
+    taskNameSpan.innerText = taskNameValue;
+    taskNameSpan.style.color = "purple";
+    taskDelButton.value = "delete";
+    taskDelButton.type = "button";
+    taskDelButton.className = "delete";
+    taskDelButton.style.display = "inline-block";
+    taskDelButton.style.position = "relative";
+    taskDelButton.style.top = "-25px";
+    taskDelButton.style.color = "red";
+    taskDelButton.style.backgroundColor = "white";
+    taskDelButton.style.boxShadow = "2px 3px 6px 2px grey";
+    taskDelButton.style.border = "none";
+    taskDelButton.style.borderRadius = "6px";
+
+
+
+    taskDelButton.style.float = "right";
+    taskDelButton.style.clear = "both";
+    taskDelButton.style.fontSize = "2vw";
+
+    taskNameSpan.style.float = "left";
+    taskNameSpan.style.clear = "both";
+    taskNameSpan.style.fontSize = "2vw";
+
+
+    taskDiv.style.marginTop = "30px";
+    taskDiv.style.fontSize = "2vw"
+    taskDiv.className = "div-list";
+    taskDiv.appendChild(taskNameSpan);
+    taskDiv.appendChild(taskDelButton);
+
+     
+     localStorage.setItem("addedTask", taskDiv);
+     let addedTask = localStorage.getItem("addedTask");
+    console.log(addedTask);
+
+
+
+    // Delete of book functionality
+ 
+    delbtns = document.querySelectorAll(".delete");
+    delbtns.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+
+            taskDiv = e.target.parentElement;
+            
+
+        
+            taskDiv.remove();
+            e.preventDefault();
+
+
+});
+
+e.preventDefault();
+
+});
+taskListForm.reset();
+taskListForm.submit();
+});
+
+
+
+</script>
+</body>
+
+</html>

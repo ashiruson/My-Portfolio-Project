@@ -1,0 +1,289 @@
+
+
+       *{
+
+        box-sizing: border-box;
+  }
+
+
+  html, body{
+
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    div{
+
+        padding: 20px;
+    }
+
+
+   nav{
+
+       background-color: black;
+       padding: 35px;
+   }
+
+   a{
+       padding: 15px;
+       text-decoration: none;
+       color: white;
+       font-size: 3vw;
+       margin-left: 4%;
+   }
+
+   footer{
+
+       background-color: black;
+       color: white;
+       margin: 450px -10px -10px -10px;
+       padding: 20px;
+       overflow-x: hidden;
+   }
+
+   .enquiry-div{
+
+       margin: 20px auto;
+       width: 100vw;
+       
+   }
+
+   .enquiry-header{
+
+       font-size: 4.5vw;
+       margin: 0 auto;
+       width: 50vw;
+   }
+    
+   #enquiry-form{
+
+        background: gold;
+        padding: 5%;
+        /* padding-left: 18%; */
+        width: 60%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        
+   }
+   
+   input, textarea{
+
+       padding: 2%;
+       width: 90%;
+      
+   }
+
+   label, input[type="submit"]{
+
+    font-size: 2.5vw;
+   }
+
+   input[type=textarea]{
+
+         width: 80%;
+   }
+
+   input[type=submit]{
+       
+       background: black;
+       color: white;
+   }
+
+  footer{
+
+       font-size: 2.5vw;
+  }
+
+  .about-para{
+
+       font-size: 2.5vw;
+  }
+
+  .about-me{
+
+       font-size: 6.5vw;
+  }
+
+  nav a{
+
+      font-size: 3;
+  }
+
+  *{
+
+    box-sizing: border-box;
+}
+
+.image-div{
+
+    width: 60vw;
+    margin:auto;
+    background: white;
+    box-shadow: 2px 3px 4px 5px gray;
+    box-shadow: 2px 4px 6px 2px grey;
+    border: none;
+    padding: 20px;
+    /* height: 1000px; */
+
+    
+}
+
+
+.hire-me a{
+
+       color: black;
+       padding: 5px 25% 5px 25%;
+
+}
+
+.my-picture{
+
+      display: block;
+      width: 100%;
+      margin: 30px auto;
+      /* border-bottom: 1px solid black; */
+      /* height: 200px; */
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border: none;
+      border: 1px solid white;
+      border-radius: 50%;
+      
+}
+
+.about-me{
+
+     padding: 2px;
+     width: 100%;
+     background: black;
+     color: white;
+     margin-bottom: 300px;
+     text-align: center;
+
+}
+
+.hire-me-btn{
+
+    
+    background: gold;
+      color: black;
+      text-align: center;
+      width: 100%;
+      border: none;
+      padding: 20px;
+      font-weight: bold;
+}
+
+.about-me, .image-div{
+
+      margin: 0 auto;
+      width: 70vw;
+}
+
+/* .profile{
+
+      margin-top: 50px;
+} */
+
+ .intro{
+
+     font-size: 3vw;
+ }
+
+ .about-me-header{
+
+    font-size: 4vw;
+}
+
+
+h1{
+    font-size: 5vw;
+}
+
+h2{
+
+  font-size: 4vw;
+}
+
+h3{
+
+  font-size: 3;
+}
+
+a, p, label, span{
+
+    font-size: 2vw;
+}
+
+
+.greeting{
+     
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* Home page media query for small devices and phone*/
+
+@media (max-width: 600px){
+
+       .image-div{
+
+           width: 50vw;
+           margin-top: -35px;
+           padding: 10px;
+       }
+
+       .image-div p {
+               
+        font-size: 2.5vw;
+       }
+
+       .my-picture{
+
+            width: 50%;
+            margin-top: 4px;
+       }
+
+       .enquiry-div, .enquiry-header, #enquiry-form{
+
+        width: 70vw;
+        padding: 20px;
+        box-sizing: border-box;
+  }
+
+}
+
+/* Media query for medium devices, tablets and phone on portrait */
+
+
+@media (min-width: 600px){
+   
+
+
+
+    .image-div{
+
+        width: 50vw;
+        margin-top: -35px;
+        padding: 20px;
+    }
+
+    .image-div p {
+            
+     font-size: 2.5vw;
+    }
+
+    .my-picture{
+
+         width: 50%;
+         margin-top: 4px;
+    }
+
+   
+
+      
+}

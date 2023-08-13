@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         
+         html, body{
+
+              margin: 0px;
+              padding: 0px;
+              overflow-x: hidden;
+         }
+        .container{
+
+            width: 70vw;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        #myInput{
+
+         width: 100%;
+         padding: 5px;
+         border: none;
+         box-shadow: 2px 4px 6px 2px grey;
+         background: white;
+         border-radius: 6px;
+         margin-top: 5px;
+}
+
+ .app-name{
+
+       color: magenta;
+    }
+
+   label{
+
+       margin-left: 10px;
+    }
+
+     footer{
+
+          color: magenta;
+          text-align: center;
+          font-size: 3.5vw;
+          margin-top: 500px;
+     }
+
+     .app-brief{
+
+        font-weight: bold;
+
+     }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="app-name">Real Time Output App</h1>
+        <p class="app-brief">Get what you type in real time</p>
+        <label for="text">Try inputing something</label><br>
+        <input type="text" name="" id="myInput">
+    </div>
+    <h4 class="rti"></h4>
+
+   <footer>&copy; 2022 Zubairu Ashiru</footer>
+</body>
+<script>
+
+let input = document.querySelector("input");
+let realTimeInput = document.querySelector(".rti");
+
+
+input.addEventListener("input", function(){
+  
+
+let name = document.querySelector("#myInput").value;
+
+
+
+    // On deleting a character with backspace;
+
+    if( realTimeInput.innerHTML !== name){ // if input is not equal to the real time output
+      let stringArray = [...name];// Turnin string into an array
+      let deletedCharArray = stringArray.pop(); //removing the last character
+      realTimeInput.innerHTML = deletedCharArray;
+      console.log(realTimeInput.innerHTML = name);
+      realTimeInput.style.color = 'red';
+      realTimeInput.style.background= "yellow";
+      realTimeInput.style.fontSize = "50px";
+   
+
+
+
+      //Local Storage code
+
+      
+localStorage.setItem("input", realTimeInput.innerHTML);
+let myInput = localStorage.getItem("input");
+realTimeInput.innerHTML = myInput;
+
+
+    //   console.log(deletedCharArray);
+
+
+
+    }else{
+        // realTimeInput.delete[realTimeInput.innerHTML.length - 1];
+        // realTimeInput.innerHTML += `${name[name.length - 1]}`;
+        realTimeInput.style.color = 'red';
+        realTimeInput.style.fontSize = "30px";
+
+}
+})
+   
+
+
+</script>
+</html>

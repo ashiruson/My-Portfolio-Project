@@ -1,0 +1,119 @@
+
+
+       *{
+
+        box-sizing: border-box;
+  }
+
+
+  html, body{
+
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+   nav{
+
+       background-color: black;
+       padding: 35px;
+   }
+
+/* 
+   .app{
+
+       width: 100%;
+       box-sizing: border-box;
+       padding: 5%;
+      
+   } */
+
+   /* .profile{
+
+    display: flex;
+    flex-direction: row;
+
+   } */
+
+   .intro span{
+
+    font-size: 4vw;
+}
+
+   a{
+       padding: 5px;
+       text-decoration: none;
+       color: white;
+
+       margin-left: 4%;
+   }
+
+   footer{
+
+       background-color: black;
+       color: white;
+       margin: 450px -10px -10px -10px;
+       padding: 20px;
+       overflow-x: hidden;
+   }
+
+   /* .about-me{
+
+       background: black;
+       color: white;
+
+       padding: 2.5%;
+       width: 100%;
+   } */
+
+/* 
+   .short-bio-div{
+
+       width: 50%;
+       border: 1px solid black;
+       display: inline-block;
+   } */
+
+
+   .enquiry-div{
+
+       margin: 20px auto;
+       width: 40%;
+       
+   }
+    
+   #enquiry-form{
+
+        background: gold;
+        padding: 10%;
+        padding-left: 18%;
+        
+   }
+   
+   input, textarea{
+
+       padding: 2%;
+       width: 80%;
+   }
+
+   input[type=textarea]{
+
+         width: 80%;
+   }
+
+   input[type=submit]{
+       
+       background: black;
+       color: white;
+   }
+
+   .about-me-header{
+
+        font-size: 2.5vw;
+   }
+
+   .hire-me-link{
+
+       padding: 80px;
+   }
